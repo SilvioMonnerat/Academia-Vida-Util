@@ -23,36 +23,36 @@
 </head>
 <body <?php body_class() ?>>
 	
-	<header id="header" class="container">
-		<div class="logo span3">
-
-			<?php
-				$logo = new WP_Query(
-					array(
-				    	'post_type'=>'logo'
-					)
-				);
-				while ($logo->have_posts()) : $logo->the_post(); 
-			        global $post;
-			        $meta = get_post_meta( $post->ID, 'upload_file', true );
-			?>
-			<a href="<?php bloginfo('home') ?>"><img src="<?php echo $meta; ?>"></a>
-			<?php 
-				endwhile; 
-				wp_reset_query(); 
-			?>
-
-		</div>	
-		<nav class="span7">
-			<?php 
-				wp_nav_menu( 
-					array(
-						'theme_location'  => 'header_menu',
-						'container_class' => 'menu'
-					)
-				); 
-			?>
-		</nav>
+	<header id="header">
+		<section role="header" class="container">
+			<div class="logo span2">
+				<?php
+					$logo = new WP_Query(
+						array(
+					    	'post_type'=>'logo'
+						)
+					);
+					while ($logo->have_posts()) : $logo->the_post(); 
+				        global $post;
+				        $meta = get_post_meta( $post->ID, 'upload_file', true );
+				?>
+				<a href="<?php bloginfo('home') ?>"><img src="<?php echo $meta; ?>"></a>
+				<?php 
+					endwhile; 
+					wp_reset_query(); 
+				?>
+			</div>
+			<nav class="menu_header span7">
+				<?php 
+					wp_nav_menu( 
+						array(
+							'theme_location'  => 'header_menu',
+							'container_class' => 'menu'
+						)
+					); 
+				?>
+			</nav>
+		</section>
 	</header>
 
 	<div id="content">
