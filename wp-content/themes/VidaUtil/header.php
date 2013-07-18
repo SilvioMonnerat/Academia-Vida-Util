@@ -28,7 +28,7 @@
 <body <?php body_class() ?>>
 	
 	<header id="header">
-		<section role="header" class="container">
+		<section role="header" class="container clearfix">
 			<div class="logo span2">
 				<?php
 					$logo = new WP_Query(

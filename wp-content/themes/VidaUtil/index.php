@@ -1,12 +1,12 @@
 
 <?php get_header(); ?>
 
-	<section class="slider">
+	<section role="slider">
 		<?php echo do_shortcode( '[layerslider id="1"]' ) ?>
 	</section>
 
 	<div id="content">
-		<article id="post-<?php the_ID(); ?>" class="container">
+		<article id="post-<?php the_ID(); ?>" class="container clearfix">
 			<?php
 				$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$featured = new WP_Query(
@@ -58,16 +58,19 @@
 			    <?php endwhile;?> <!-- end loop of featured -->
 			</ul>
 
-			<hr>
-
+			<hr class="clearfix">
+			
 		</section>
+		
 	</div> <!-- end of #content -->
 
 	<div id="sidebar"></div> <!-- end of #sidebar -->
 
-	<footer id="footer" class="">
-		<section class="container">
-			<p class="row"></p>
+	<footer id="footer">
+		<section class="container clearfix">
+			<p class="row">
+				<?php copyright(); ?>
+			</p>
 		</section>
 	</footer> <!-- end of #footer -->
 
