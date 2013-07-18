@@ -23,8 +23,8 @@
 			    <?php //if(get_post_meta($post->ID)): ?>
 			    <?php 
 					$thumb  = '';
-					$width  = 120;
-					$height = 120;
+					$width  = 210;
+					$height = 210;
 					$title  = get_the_title();
 					$img    = get_post_image_src($post->ID);
 					//d($img);
@@ -58,7 +58,7 @@
 			    <?php endwhile;?> <!-- end loop of featured -->
 			</ul>
 
-			<hr class="row">
+			<hr>
 
 		</section>
 	</div> <!-- end of #content -->
@@ -67,7 +67,7 @@
 
 	<footer id="footer" class="">
 		<section class="container">
-			<?php echo copyright(); ?>
+			<p class="row"></p>
 		</section>
 	</footer> <!-- end of #footer -->
 

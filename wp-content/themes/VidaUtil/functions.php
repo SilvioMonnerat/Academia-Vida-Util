@@ -110,7 +110,7 @@
 	}
 
 	function copyright(){
-		return '&copy; 2013 - Todos os direitos reservados';
+		echo '&copy; 2013 - Todos os direitos reservados';
 	}
 	
 
