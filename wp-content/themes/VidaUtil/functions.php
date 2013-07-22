@@ -112,6 +112,24 @@
 	function copyright(){
 		echo '&copy; 2013 - Todos os direitos reservados';
 	}
-	
+
+	function iconSociais(){
+		$url_facebook = "http://wwww.facebook.com/";
+		$url_twitter  = "http://wwww.twitter.com/";
+		$url_rss      = site_url()."/rss";
+		$url_email    = "mailto:silvio@cabanacriacao.com?subject=Contato";
+		$imgURL       = get_template_directory_uri()."/images/";
+
+		$output= '
+			<ul>
+				<li class="iconFacebook"><a href="'.$url_facebook.'" target="_blank"><img src="'.$imgURL.'/icon-facebook.png" /></a></li>
+				<li class="iconTwitter"><a href="'.$url_twitter.'" target="_blank"><img src="'.$imgURL.'/icon-twitter.png" /></a></li>
+				<li class="iconRSS"><a href="'.$url_rss.'" target="_blank"><img src="'.$imgURL.'/icon-rss.png" /></a></li>
+				<li class="iconRSS"><a href="'.$url_email.'" target="_blank"><img src="'.$imgURL.'/icon-email.png" /></a></li>
+			</ul>
+		';
+
+		echo $output;
+	}
 
  
