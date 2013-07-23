@@ -21,14 +21,12 @@
 			?>
 			<ul>
 			    <?php while ($featured -> have_posts()) : $featured -> the_post(); ?>
-			    <?php //if(get_post_meta($post->ID)): ?>
 			    <?php 
 					$thumb  = '';
 					$width  = 210;
 					$height = 210;
 					$title  = get_the_title();
 					$img    = get_post_image_src($post->ID);
-					//d($img);
 					$default_attr = array(
 						'src'   => $src,
 						'class' => "attachment-$size",
@@ -44,7 +42,6 @@
 				                 <a href="<?php the_permalink(); ?>">
 				                    <?php 
 				                    	the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
-				                    	//the_post_thumbnail('featured');
 				                    ?>
 				                </a> 
 			                <?php endif; ?>

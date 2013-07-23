@@ -67,9 +67,7 @@
 				?>
 			</nav>
 			<div class="search span3">
-				<form method="get" action="/search" id="search">
-		  			<input type="search" name="search" id="search" placeholder="Search..." />
-				</form>
+				<?php search_form(); ?>
 			</div>
 		</section>
 	</header>

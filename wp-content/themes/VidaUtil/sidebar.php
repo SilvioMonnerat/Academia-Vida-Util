@@ -1,26 +1,7 @@
 <aside id="sidebar">
-	<form role="search" method="get" id="searchform">
-		<div>
-			<input type="text" value="" name="s" id="s" />
-			<input type="submit" id="searchsubmit" value="Pesquisar" />
-		</div>
-	</form> 
+	<div class="span3">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('w_default') ) : ?>
 
-	<h3>Categorias</h3>
-	<ul>
-		<?php wp_list_categories('title_li='); ?>
-	</ul>
-
-
-	<h3>Tags</h3>
-	<div id="tags">
-		<?php wp_tag_cloud(); ?>
+		<?php endif; ?>
 	</div>
-
-
-	<h3>Links</h3>
-	<ul>
-		<?php wp_list_bookmarks('title_li='); ?>
-	</ul>
-
 </aside>

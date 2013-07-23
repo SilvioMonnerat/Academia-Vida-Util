@@ -76,8 +76,8 @@ hr{
 		float: right;
 		display: inline-block;
 		margin-top: 50px;
-		input[type="search"] {
-		    background: url(../images/search-white.png) no-repeat 10px 10px rgba(255,255,255,255.2);
+		input[type="text"] {
+		    background: url(../images/search-dark.png) no-repeat 10px 10px #fafafa;
 		    border: none;
 		    font: 12px 'Ubuntu Light';
 		    color: #595959 !important;
@@ -90,7 +90,7 @@ hr{
 		    -ms-border-radius:20px;
 		    -webkit-border-radius: 20px;
 		    -moz-border-radius: 20px;
-		    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+		    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 		    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 		    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 		    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
@@ -101,7 +101,7 @@ hr{
 		    -ms-transition: all 0.7s ease 0s;
 		    transition: all 0.7s ease 0s;
 		}
-		input[type="search"]:focus {
+		input[type="text"]:focus {
 	   		width: 220px;
 	    }
 	}
@@ -284,4 +284,59 @@ footer#footer{
 			li.iconRSS{}
 		}
 	}
+}
+
+
+form#searchform {
+	display:block;
+	width:255px;
+	height:20px;
+	position:absolute;
+	top:56px;
+	left:753px;
+}
+
+.searchbutton{
+	color: #0066ff;
+	border: 0px solid;
+	display:block;
+	width:45px;
+	height:20px;
+	background: #d2e4ff;
+	position:absolute;
+	top:0px;
+	left:202px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	font-size: 12px;
+}
+
+.searchbutton:hover {
+	background-color: #0066ff;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.searchfield {
+	background:url(/images/search-field-shadow.png) top left repeat-x #666666;
+	color: #eeeeee;
+	border: 0px solid;
+	position: absolute;
+	top:0px;
+	left:0px;
+	display:block;
+	width:200px;
+	height:20px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	font-size: 12px;
+}
+
+aside#sidebar{
+	float: right;
+	border: 1px solid;
 }

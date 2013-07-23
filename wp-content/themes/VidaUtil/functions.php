@@ -1,5 +1,4 @@
-<?php 
-	
+<?php 	
 
 	if ( ! function_exists( 'setup_theme' ) ){
 		function setup_theme(){
@@ -17,6 +16,9 @@
 			add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 			add_action( 'init', 'register_main_menus' );
+
+			add_action( 'init', 'sidebar_widgets' ); 
+
 
 			require_once(TEMPLATEPATH . '/shortcode/shortcode.php');
 
@@ -53,6 +55,7 @@
 
 			wp_enqueue_script( 'jquery ' );
 			wp_enqueue_script('bootstrap', $template_dir . '/js/bootstrap.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('custom', $template_dir . '/js/custom.js', array('jquery'), '1.0', true);
 			
 		}
 		if(is_page('contact')){
@@ -106,11 +109,11 @@
 	
 	function readMore() {
 		global $post;
-		return '<a href="'.get_permalink($post->ID). '">'.'Read More &raquo;'.'</a>';
+		return '<a href="'.get_permalink($post->ID).'">'.esc_attr__( 'Read More &raquo;' ).'</a>';
 	}
 
 	function copyright(){
-		echo '&copy; 2013 - Todos os direitos reservados';
+		print __( '&copy; 2013 - All rights reserved.' );
 	}
 
 	function iconSociais(){
@@ -132,4 +135,33 @@
 		echo $output;
 	}
 
- 
+	function search_form() {
+	    $output = '
+	    	<form role="search" method="get" action="'.home_url().'/" id="searchsubmit">
+	  			<input type="text" name="s" id="s" placeholder="'.esc_attr__( 'Search' ).'" />
+			</form>
+		';
+	    print $output;
+	}
+ 	
+	function sidebar_widgets() {
+		 register_sidebar( array (
+			 'name'          => 'Default',
+			 'id'            => 'w_default',
+			 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+			 'after_widget'  => "</li>",
+			 'before_title'  => '<h3 class="widget-title">',
+			 'after_title'   => '</h3>',
+		  ) );
+
+		 register_sidebar( array (
+			 'name'          => 'Gallery',
+			 'id'            => 'w_gallery',
+			 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+			 'after_widget'  => "</li>",
+			 'before_title'  => '<h3 class="widget-title">',
+			 'after_title'   => '</h3>',
+		  ) );
+	}
+ 	
+ 	
