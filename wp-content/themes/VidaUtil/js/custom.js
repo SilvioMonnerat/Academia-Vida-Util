@@ -1,4 +1,5 @@
 (function ($) {
+
 	$('input[name=s]').focus(function(){
 	    if ($(this).val() == 'Search...')
 	    	$(this).val('');

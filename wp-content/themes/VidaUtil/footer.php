@@ -1,4 +1,5 @@
-<footer id="footer">
+</div> <!-- end div .content-area -->
+	<footer id="footer">
 		<section class="container clearfix">
 			<div class="span3">
 				<?php copyright(); ?>

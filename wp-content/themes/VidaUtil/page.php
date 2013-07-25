@@ -15,35 +15,56 @@
 	);
 	$thumbnail = get_the_post_thumbnail($width,$height);
 	$thumb = $thumbnail["thumb"];
-?>
+?>       
+				
+	<div class="container">
+		<div class="main-area span9">
+			<article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 
-	<div id="content">             
-		<article id="post-<?php the_ID(); ?>" class="container clearfix"> 
-			<?php if(have_posts()): while(have_posts()):the_post(); ?>
-			
-				<?php 
-					if(has_post_thumbnail()){
-						the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
-					}
-				?>
+				<?php if(have_posts()): while(have_posts()):the_post(); ?>
 
-				<div class="span2">
-					<h1 class="title"><?php the_title() ?></h1>
-				</div>
-			
-				<div class="span6">
-					<p class=""><?php the_content(); ?></p> 
-				</div>
-								
+					<div class="page-thumbnail">
+						<?php 					
+							if(has_post_thumbnail()){
+								the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
+							}else{
+								$fixeIMG = '	
+									<img src="'.get_template_directory_uri().'/images/tarj2.jpg" />
+								';
+								print $fixeIMG;
+							}
+						?>
+					</div> <!-- end .page-thumbnail -->
 
-			<?php endwhile; ?>
+					<div class="blogmeta">
+						<ul>
+							<li><h1 class="title"><?php the_title() ?></h1></li>
+							<li><?php esc_html_e('Página criada'); ?> <?php esc_html_e('por:'); ?> <?php the_author_posts_link(); ?></li>
+							<li><?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')); ?> </li>
+						</ul>						
+					</div> <!-- end .blogmeta -->
 
-			<?php endif; wp_reset_query(); ?>
+					<div class="">
+						<p class=""><?php the_content(); ?></p> 
+					</div>
 
-			
-			<?php get_sidebar(); ?>
+				<?php endwhile; ?>
+				<?php endif; wp_reset_query(); ?>
 
-		</article>
+			</article>
+
+			<?php wp_link_pages( array(
+				'before' => '<p><strong>'.esc_attr__('Pages','VidaUtil').':</strong> ',
+				'after' => '</p>', 
+				'next_or_number' => 'number'
+				));
+			 ?>
+			<?php edit_post_link(esc_attr__('Editar está página','VidaUtil')); ?>
+
+		</div>						
+		
+		<?php get_sidebar(); ?>
+
 	</div>
 
 

@@ -15,12 +15,11 @@ hr{
 	clear: both;
 }
 #header{
-	background-color: #fafafa;
+	background-color: #e5e5e5;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	border-bottom: 10px solid #f7931e;
-
+	border-bottom: 10px solid orange;
 	.logo{
 	}
 	nav.menu_header{
@@ -287,56 +286,152 @@ footer#footer{
 }
 
 
-form#searchform {
-	display:block;
-	width:255px;
-	height:20px;
-	position:absolute;
-	top:56px;
-	left:753px;
-}
-
-.searchbutton{
-	color: #0066ff;
-	border: 0px solid;
-	display:block;
-	width:45px;
-	height:20px;
-	background: #d2e4ff;
-	position:absolute;
-	top:0px;
-	left:202px;
-	-moz-border-radius-bottomright: 4px;
-	-moz-border-radius-topright: 4px;
-	-webkit-border-bottom-right-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	font-size: 12px;
-}
-
-.searchbutton:hover {
-	background-color: #0066ff;
-	color: #ffffff;
-	font-size: 12px;
-}
-
-.searchfield {
-	background:url(/images/search-field-shadow.png) top left repeat-x #666666;
-	color: #eeeeee;
-	border: 0px solid;
-	position: absolute;
-	top:0px;
-	left:0px;
-	display:block;
-	width:200px;
-	height:20px;
-	-moz-border-radius-bottomleft: 4px;
-	-moz-border-radius-topleft: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-webkit-border-top-left-radius: 4px;
-	font-size: 12px;
-}
-
-aside#sidebar{
+/* Estilizando o sidebar + Widgets */
+#sidebar{
 	float: right;
-	border: 1px solid;
+	li{
+		list-style: none;
+		padding-bottom: 20px;
+		h3.widget-title{
+			margin: 0 0 10px;
+			padding:0 0 0 10px;
+			background: orange;
+			color: #FFF;
+			font-family: 'Ubuntu Light';
+			font-weight: lighter;
+			font-size: 25px;
+			-moz-border-radius-bottomright: 25px;
+			-moz-border-radius-topleft: 25px;
+			-webkit-border-bottom-right-radius: 25px;
+			-webkit-border-top-left-radius: 25px;
+		}
+		ul{
+			margin: 0px;
+			padding: 0px;
+			display: block;
+			li{
+				margin: 0;
+				padding: 0 0 5px 10px;
+				display: block;
+				float: none;
+				a{
+					font-family: 'Ubuntu Light';
+					color:#595959;
+				}
+			}
+			li:first-child{
+
+			}
+			li:last-child{
+				margin: 0;
+				padding: 0 0 5px 10px;
+				display: block;
+				float: none;
+			}
+		}
+	}
+	li.post-recents{
+		a{
+			img{
+				float:left;
+				padding-right: 10px;
+			}
+		}
+	}
+	p.post-content{
+		a{
+			display: block;
+		}
+	}
+	
+}
+
+#calendar_wrap{
+	text-align: center;
+	table#wp-calendar{
+		width: 100%;
+		caption{
+			font-family: 'Ubunto Light';
+			font-size: 20px;
+			text-transform: capitalize;
+			margin-bottom: 10px;
+		}
+		td{
+			font-family: 'Ubuntu Light';
+			font-weight: lighter;
+			color:#595959;
+		}
+	}
+}
+
+form#searchform{
+	margin: 0px;
+	label.screen-reader-text{
+		display: none;
+	}
+	input[type="text"]{
+		width: 85%;
+		margin-left: 10px;
+	}
+	input{
+		display: inline-block;
+	}
+	input[type="submit"]{
+		display: none;
+	}
+}
+
+.entry { 
+	border: 1px solid transparent; 
+	background-color: #fff;
+	position: relative; 
+	margin-bottom: 30px; 
+	width: 100%; 
+	margin-top: 20px 
+}	
+
+.entry:before { 
+	content: '';
+	position: absolute;
+	height: 8px; 
+	bottom: -8px;
+	left: 0; 
+	background: url(../images/middle-shadow.png) no-repeat top center; 
+	width: 100%; 
+}
+
+.content-area{
+	width: 100%;
+	max-width: 100%;
+	background: #f9f9f9;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Estilizando o conteúdo da template */
+
+.main-area{
+	article{
+		.page-thumbnail{
+
+		}
+		.blogmeta{
+			ul{
+				margin: 0px;
+				padding: 0px;
+				li{
+					display: inline-block;
+					list-style: none;
+					font-family: 'Ubuntu Light';
+					a{
+
+					}
+					h1.title{
+						font-family: 'Ubuntu Light';
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
 }

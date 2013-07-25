@@ -7,8 +7,21 @@
 <html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#" >
 <!--<![endif]-->
 <head>
+
+	<meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />    
+   	<meta property="og:url" content="" />
+    <meta property="fb:app_id" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php wp_title(''); ?></title>
+	<title><?php wp_title(); ?></title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon"/>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
@@ -31,10 +44,9 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=272438806229311";
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, "script", "facebook-jssdk"));</script>
-
 
 	<header id="header">
 		<section role="header" class="container clearfix">
@@ -71,3 +83,6 @@
 			</div>
 		</section>
 	</header>
+
+	<div class="content-area">
+	
