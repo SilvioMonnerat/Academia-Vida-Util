@@ -5,7 +5,7 @@
 		<?php echo do_shortcode( '[layerslider id="1"]' ) ?>
 	</section>
 
-	<div id="content">
+	<div class="content">
 		<article id="post-<?php the_ID(); ?>" class="container clearfix">
 			<?php
 				$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -58,7 +58,7 @@
 			<hr class="line clearfix">
 
 			<div class="likeBox span12">
-				<div class="fb-like-box" data-href="https://www.facebook.com/FacebookDevelopers" data-width="1170" data-height="200" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+				<div class="fb-like-box" data-href="https://www.facebook.com/wordpress" data-width="1170" data-height="200" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
 		
 		</article>

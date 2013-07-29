@@ -40,26 +40,19 @@
 						<ul>
 							<li><h1 class="title"><?php the_title() ?></h1></li>
 							<li><?php esc_html_e('Página criada'); ?> <?php esc_html_e('por:'); ?> <?php the_author_posts_link(); ?></li>
-							<li><?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')); ?> </li>
+							<li><?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')); ?> - </li>
+							<li><?php the_breadcrumb(); ?></li>
 						</ul>						
 					</div> <!-- end .blogmeta -->
 
-					<div class="">
-						<p class=""><?php the_content(); ?></p> 
+					<div class="content-page">
+						<p class="row"><?php the_content(); ?></p> 
 					</div>
 
 				<?php endwhile; ?>
 				<?php endif; wp_reset_query(); ?>
 
 			</article>
-
-			<?php wp_link_pages( array(
-				'before' => '<p><strong>'.esc_attr__('Pages','VidaUtil').':</strong> ',
-				'after' => '</p>', 
-				'next_or_number' => 'number'
-				));
-			 ?>
-			<?php edit_post_link(esc_attr__('Editar está página','VidaUtil')); ?>
 
 		</div>						
 		

@@ -11,16 +11,32 @@ hr{
 	width: 100% !important;
 	max-width: 100% !important;
 }
+.likeBox{
+	.fb-like-box, .fb-like-box span, .fb-like-box span iframe[style] {
+		width: 100% !important; 
+		max-width: 100% !important;
+	}
+}
 .clearfix{
 	clear: both;
 }
 #header{
-	background-color: #e5e5e5;
+	background-color: #FFF;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
 	border-bottom: 10px solid orange;
 	.logo{
+		img{
+			margin: 10px 0;
+		}
+		h1{
+			font-size: 40px;
+			font-family: 'Ubuntu Light';
+			font-weight: lighter;
+			color:#0073ae;
+			margin-top: 30px;
+		}
 	}
 	nav.menu_header{
 		.menu{
@@ -28,7 +44,7 @@ hr{
 				li{
 					display: inline-block;
 					list-style: none;
-					padding: 50px 20px;
+					padding: 35px 20px;
 					background: url(../images/icon-hover.png) no-repeat bottom center;
 					-webkit-transition: all 400ms linear;
 				    -moz-transition: all 400ms linear;
@@ -74,7 +90,7 @@ hr{
 	.search{
 		float: right;
 		display: inline-block;
-		margin-top: 50px;
+		margin-top: 30px;
 		input[type="text"] {
 		    background: url(../images/search-dark.png) no-repeat 10px 10px #fafafa;
 		    border: none;
@@ -106,15 +122,17 @@ hr{
 	}
 }
 
-#content{
-	background: #fafafa;
+.content{
+	width: 100%;
+	max-width: 100%;
+	background: #f9f9f9;
+	margin: 0px;
+	padding: 0px;
 	box-shadow: 0px 5px 4px #c4c4c4;
 	-moz-box-shadow: 0px 5px 4px #c4c4c4;
 	-webkit-box-shadow: 0px 5px 4px #c4c4c4;
 	-o-box-shadow: 0px 5px 4px #c4c4c4;
 	-ms-box-shadow: 0px 5px 4px #c4c4c4;
-	width: 100%;
-	margin-bottom: 30px;
 	ul{
 		margin: 30px 0px;
 		padding: 0px;
@@ -288,6 +306,8 @@ footer#footer{
 
 /* Estilizando o sidebar + Widgets */
 #sidebar{
+	margin-top: 30px;
+	margin-bottom: 30px;
 	float: right;
 	li{
 		list-style: none;
@@ -295,7 +315,7 @@ footer#footer{
 		h3.widget-title{
 			margin: 0 0 10px;
 			padding:0 0 0 10px;
-			background: orange;
+			background: #6fc309;
 			color: #FFF;
 			font-family: 'Ubuntu Light';
 			font-weight: lighter;
@@ -304,6 +324,10 @@ footer#footer{
 			-moz-border-radius-topleft: 25px;
 			-webkit-border-bottom-right-radius: 25px;
 			-webkit-border-top-left-radius: 25px;
+			-o-border-radius-bottomright: 25px;
+            -o-border-radius-topleft: 25px;
+            -ms-border-radius-bottomright: 25px;
+            -ms-border-radius-topleft: 25px;
 		}
 		ul{
 			margin: 0px;
@@ -317,6 +341,11 @@ footer#footer{
 				a{
 					font-family: 'Ubuntu Light';
 					color:#595959;
+				}
+			}
+			.likeboxwrap{
+				#likebox-frame, .fb-like-box, .fb-like-box span, .fb-like-box span iframe[style] {
+					width: 100% !important; 
 				}
 			}
 			li:first-child{
@@ -382,12 +411,11 @@ form#searchform{
 }
 
 .entry { 
-	border: 1px solid transparent; 
 	background-color: #fff;
 	position: relative; 
 	margin-bottom: 30px; 
 	width: 100%; 
-	margin-top: 20px 
+	margin-top: 30px 
 }	
 
 .entry:before { 
@@ -406,6 +434,11 @@ form#searchform{
 	background: #f9f9f9;
 	margin: 0px;
 	padding: 0px;
+	box-shadow: 0px 5px 4px #c4c4c4;
+	-moz-box-shadow: 0px 5px 4px #c4c4c4;
+	-webkit-box-shadow: 0px 5px 4px #c4c4c4;
+	-o-box-shadow: 0px 5px 4px #c4c4c4;
+	-ms-box-shadow: 0px 5px 4px #c4c4c4;
 }
 
 /* Estilizando o conteúdo da template */
@@ -416,6 +449,7 @@ form#searchform{
 
 		}
 		.blogmeta{
+			padding: 15px 20px;
 			ul{
 				margin: 0px;
 				padding: 0px;
@@ -428,9 +462,30 @@ form#searchform{
 					}
 					h1.title{
 						font-family: 'Ubuntu Light';
-						font-size: 30px;
+						font-weight: lighter;
+						font-size: 25px;
+						//background: #6fc309;
+						background: orange;
+						color:#FFF;
+						padding: 20px;
+						-webkit-border-bottom-right-radius: 50px;
+						-webkit-border-top-left-radius: 50px;
+						-moz-border-radius-bottomright: 50px;
+			            -moz-border-radius-topleft: 50px;
+			            -o-border-radius-bottomright: 50px;
+			            -o-border-radius-topleft: 50px;
+			            -ms-border-radius-bottomright: 50px;
+			            -ms-border-radius-topleft: 50px;
 					}
 				}
+			}
+		}
+		.content-page{
+			padding: 0 20px 15px;
+			p{
+				font-family: 'Ubuntu Light';
+				font-size: 13px;
+				color:#595959;
 			}
 		}
 	}
