@@ -44,3 +44,7 @@
 
     
 <?php get_footer(); ?>
+
+<a href="http://www.google.com">Google</a>
+<a href="http://g1.globo.com/">G1</a>
+<a href="www.camara.rj.gov.br">Câmara Municipal do Rio de Janeiro</a>
