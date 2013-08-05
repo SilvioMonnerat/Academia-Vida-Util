@@ -1,11 +1,6 @@
-<?php get_header() ?>
-
-
-	<div id="content">
-		<article id="post-<?php the_ID(); ?>" class="container clearfix">
-			<h1>Not found page!!!</h1>
-		</section>
-	</div>
-
-
-<?php get_footer() ?>
+<div class="content-404">
+	<h2><?php echo "Conteúdo pesquisado não encotrado!"; ?></h2>
+	<p>Pesquisar Novamente<?php get_search_form() ?></p>
+	
+	<a href="<?php home_url(); ?>"> &laquo; Voltar a Página inicial</a>
+</div>

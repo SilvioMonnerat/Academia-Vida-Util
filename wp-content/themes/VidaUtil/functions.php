@@ -154,7 +154,7 @@
 	function search_form() {
 	    $output = '
 	    	<form role="search" method="get" action="'.home_url().'/" id="searchsubmit">
-	  			<input type="text" name="s" id="s" placeholder="'.esc_attr__( 'Search' ).'" />
+	  			<input type="text" name="s" id="s" placeholder="'.esc_attr__( 'Pesquisar' ).'" />
 			</form>
 		';
 	    print $output;

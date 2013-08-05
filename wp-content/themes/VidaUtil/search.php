@@ -1,50 +1,72 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
-    <div id="content">             
-        <article id="post-<?php the_ID(); ?>" class="container clearfix"> 
+<?php 
+    $thumb  = '';
+    $width  = 250;
+    $height = 150;
+    $title  = get_the_title();
+    $img    = get_post_image_src($post->ID);
+    //d($img);
+    $default_attr = array(
+        'src'   => $src,
+        'class' => "attachment-$size",
+        'alt'   => trim(strip_tags( $attachment->post_excerpt )),
+        'title' => trim(strip_tags( $attachment->post_title )),
+    );
+    $thumbnail = get_the_post_thumbnail($width,$height);
+    $thumb = $thumbnail["thumb"];
+?>       
+                
+    <div class="container">
+        <div class="main-area span9">
+            <article id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix'); ?>>
 
-            <h1 class="title"><span><?php _e('Search Results for: '); ?></span><?php echo esc_attr( get_search_query() ); ?></h1>
-            
-            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+                <h1 class="title-search"><span><?php _e('Resultado da pesquisa por: '); ?></span><?php echo esc_attr( get_search_query() ); ?></h1>
 
-            <header class="article-header">                            
-                <h3 class="search-title">
-                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h3>       
+                <?php if(have_posts()): while(have_posts()):the_post(); ?>
 
-                <?php _e("Posted"); ?>
-                <time class="updated" datetime="<?php echo the_time('j/m/Y'); ?>" pubdate>
-                    <?php the_time('F jS, Y'); ?>
-                </time> <?php _e("by: "); ?>
-                    <span class="author">  
-                        <?php the_author_posts_link(); ?>
-                    </span>
-                <?php the_category(', '); ?>    
-            </header> <!-- end article header -->
+                    <div class="search-thumbnail">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php                   
+                                if(has_post_thumbnail()){
+                                    the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
+                                }else{
+                                    $fixeIMG = '    
+                                        <img src="'.get_template_directory_uri().'/images/tarj2.jpg" />
+                                    ';
+                                    print $fixeIMG;
+                                }
+                            ?>
+                        </a>
+                    </div> <!-- end .page-thumbnail -->
 
-            <section class="">
-                <p class="text row"><a href="<?php the_permalink() ?>"><?php the_content_limit('30'); ?></a></p>
-                <p class="readmore row"><?php echo readMore(); ?></p>
-            </section> <!-- end article section -->
+                    <div class="blogmeta">
+                        <ul>
+                            <li><?php esc_html_e('Página criada'); ?> <?php esc_html_e('por:'); ?> <?php the_author_posts_link(); ?></li>
+                            <li><?php esc_html_e('em:'); ?> <?php the_time(get_option('date_format')); ?></li>
+                            <li><?php the_category(', '); ?> </li>
+                    </div> <!-- end .blogmeta -->
 
-            <?php endwhile; ?>
+                    <div class="content-search">
+                        <div class="title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
+                        <p class="row"><a href="<?php the_permalink(); ?>"><?php the_content_limit('30'); ?></a></p>
+                    </div>
 
-            <?php else: ?>
+                <?php endwhile; else: ?>
 
-            <?php endif; wp_reset_query(); ?>
+                <?php get_template_part('404'); ?>
+
+                <?php endif; wp_reset_query(); ?>
+
+            </article>
+
+        </div>                      
         
-            <div class="span3">
-                <?php get_sidebar(); ?>
-            </div>
+        <?php get_sidebar(); ?>
 
-        </article>
     </div>
 
-    
-<?php get_footer(); ?>
 
-<a href="http://www.google.com">Google</a>
-<a href="http://g1.globo.com/">G1</a>
-<a href="www.camara.rj.gov.br">Câmara Municipal do Rio de Janeiro</a>
+<?php get_footer() ?>
+
+

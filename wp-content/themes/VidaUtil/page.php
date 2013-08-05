@@ -50,11 +50,15 @@
 					</div>
 
 				<?php endwhile; ?>
-				<?php endif; wp_reset_query(); ?>
+				<?php endif; wp_reset_query(); ?>				
 
 			</article>
 
-		</div>						
+		</div>
+		
+		<div id="comentario" class="span9 clearfix">
+			<div class="fb-comments" data-href="http://example.com" data-width="" data-num-posts="10"></div>
+		</div>	
 		
 		<?php get_sidebar(); ?>
 
