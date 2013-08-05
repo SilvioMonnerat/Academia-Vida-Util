@@ -58,6 +58,8 @@
 
 		<?php get_sidebar(); ?>
 
+		<?php get_template_part( 'comments' ) ?>
+
 	</div>
 
 

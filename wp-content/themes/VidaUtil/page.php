@@ -55,12 +55,10 @@
 			</article>
 
 		</div>
-		
-		<div id="comentario" class="span9 clearfix">
-			<div class="fb-comments" data-href="http://example.com" data-width="" data-num-posts="10"></div>
-		</div>	
-		
+				
 		<?php get_sidebar(); ?>
+
+		<?php get_template_part( 'comments' ) ?>
 
 	</div>
 
