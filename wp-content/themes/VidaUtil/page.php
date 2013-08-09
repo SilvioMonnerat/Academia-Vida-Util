@@ -15,6 +15,10 @@
 	);
 	$thumbnail = get_the_post_thumbnail($width,$height);
 	$thumb = $thumbnail["thumb"];
+
+	$fixeIMG = get_template_directory_uri()."/images/page-acedmia.jpg";
+
+	$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 ?>       
 				
 	<div class="container">
@@ -28,10 +32,7 @@
 							if(has_post_thumbnail()){
 								the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
 							}else{
-								$fixeIMG = '	
-									<img src="'.get_template_directory_uri().'/images/tarj2.jpg" />
-								';
-								print $fixeIMG;
+								the_crop_image($fixeIMG, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
 							}
 						?>
 					</div> <!-- end .page-thumbnail -->

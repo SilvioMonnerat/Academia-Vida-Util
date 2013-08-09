@@ -1,8 +1,20 @@
 
 <?php get_header(); ?>
 
-	<section role="slider">
-		<?php echo do_shortcode( '[layerslider id="1"]' ) ?>
+	<section class="slider" role="slider">
+		<?php
+			$img      = get_template_directory_uri()."/images/spinning.jpg";
+			$timthumb = get_template_directory_uri()."/m_toolbox/timthumb/timthumb.php";
+			$slider   = '[layerslider id="1"]';
+			if($slider){
+				echo do_shortcode( $slider );
+			} else{
+				$output = '
+					<img src="'.$timthumb.'?src=/'.$img.'&h=600&w=1170&zc=1" />
+				';
+				print $output;
+			}
+		?>
 	</section>
 
 	<div class="content">
@@ -11,7 +23,7 @@
 				$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$featured = new WP_Query(
 					array(
-				    	'post_type'      =>'page',
+				    	'post_type'      => 'page',
 				    	'posts_per_page' => '3',
 				    	'showposts'      => '3',
 				    	'paged'          => $paged,
@@ -23,8 +35,8 @@
 			    <?php while ($featured -> have_posts()) : $featured -> the_post(); ?>
 			    <?php 
 					$thumb  = '';
-					$width  = 210;
-					$height = 210;
+					$width  = 250;
+					$height = 250;
 					$title  = get_the_title();
 					$img    = get_post_image_src($post->ID);
 					$default_attr = array(
@@ -35,16 +47,20 @@
 					);
 					$thumbnail = get_the_post_thumbnail($width,$height);
 					$thumb = $thumbnail["thumb"];
+
+					$fixeIMG = get_template_directory_uri()."/images/featured.jpg";
 				?>					
 			        <li class="span3">
 			        	<p class="thumb row">
-			        		<?php if(has_post_thumbnail()): ?>
-				                 <a href="<?php the_permalink(); ?>">
-				                    <?php 
-				                    	the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
-				                    ?>
-				                </a> 
-			                <?php endif; ?>
+			                 <a href="<?php the_permalink(); ?>">			                
+				                <?php 					
+									if(has_post_thumbnail()){
+										the_crop_image($img, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
+									}else{
+										the_crop_image($fixeIMG, "&amp;w=$width&amp;h=$height&amp;zc=1"); 
+									}
+								?>
+							</a>
 			        	</p>
 			        	<p class="title row"><a href="<?php the_permalink() ?>"><?php echo $title; ?></a></p>			            
 			            <p class="text row"><a href="<?php the_permalink() ?>"><?php the_content_limit('13'); ?></a></p>

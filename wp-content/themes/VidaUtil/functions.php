@@ -125,18 +125,18 @@
 	
 	function readMore() {
 		global $post;
-		return '<a href="'.get_permalink($post->ID).'">'.esc_attr__( 'Read More &raquo;' ).'</a>';
+		return '<a href="'.get_permalink($post->ID).'">'.esc_attr__( 'Saiba mais &raquo;' ).'</a>';
 	}
 
 	function copyright(){
-		print __( '&copy; 2013 - All rights reserved.' );
+		print __( '&copy; 2013 - Todo os direitos Reservados.' );
 	}
 
 	function iconSociais(){
 		$url_facebook = "http://wwww.facebook.com/";
 		$url_twitter  = "http://wwww.twitter.com/";
 		$url_rss      = site_url()."/rss";
-		$url_email    = "mailto:silvio@cabanacriacao.com?subject=Contato";
+		$url_email    = "mailto:contato@academiavidautil.com?subject=Contato";
 		$imgURL       = get_template_directory_uri()."/images/";
 
 		$output= '

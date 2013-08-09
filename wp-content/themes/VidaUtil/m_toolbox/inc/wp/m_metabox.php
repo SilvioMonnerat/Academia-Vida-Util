@@ -3,10 +3,10 @@
 function get_featured_posts($post_type = array('post'), $numPost = 3) {
     $a = array(
 		'posts_per_page' => -1,
-		'post_status' => 'publish',
-		'post_type' => $post_type,
-		'order' => 'DESC',
-		'orderby' => 'modified'
+		'post_status'    => 'publish',
+		'post_type'      => $post_type,
+		'order'          => 'DESC',
+		'orderby'        => 'modified'
 	);
 	
 	$featured = array();
@@ -32,12 +32,12 @@ function get_featured_posts($post_type = array('post'), $numPost = 3) {
 	
 		if (isset($featured)) {
 			$arg = array(
-				'post__in' => $featured,
+				'post__in'       => $featured,
 				'posts_per_page' => $numPost,
-				'post_status' => 'publish',
-				'post_type' => $post_type,
-				'order' => 'DESC',
-				'orderby' => 'modified'
+				'post_status'    => 'publish',
+				'post_type'      => $post_type,
+				'order'          => 'DESC',
+				'orderby'        => 'modified'
 			);
 			$queryObject = new WP_Query($arg);
 		}

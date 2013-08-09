@@ -1,0 +1,250 @@
+/*
+	960 Grid System ~ Core CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/* `Containers
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.wrapper .grid_4 {
+	width: 220px;
+}
+
+.wrapper .grid_8 {
+	width: 460px;
+}
+
+.wrapper .grid_12 {
+	width: 700px;
+}
+
+.wrapper .grid_16 {
+	width: 940px;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.first {
+	margin-left: 0;
+}
+
+.last {
+	margin-right: 0;
+}
+
+/* `Grid >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper .grid_1 {
+	width: 40px;
+}
+
+.wrapper .grid_2 {
+	width: 100px;
+}
+
+.wrapper .grid_3 {
+	width: 160px;
+}
+
+.wrapper .grid_5 {
+	width: 280px;
+}
+
+.wrapper .grid_6 {
+	width: 340px;
+}
+
+.wrapper .grid_7 {
+	width: 400px;
+}
+
+.wrapper .grid_9 {
+	width: 520px;
+}
+
+.wrapper .grid_10 {
+	width: 580px;
+}
+
+.wrapper .grid_11 {
+	width: 640px;
+}
+
+.wrapper .grid_13 {
+	width: 760px;
+}
+
+.wrapper .grid_14 {
+	width: 820px;
+}
+
+.wrapper .grid_15 {
+	width: 880px;
+}
+
+/* `Prefix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper .prefix_4 {
+	padding-left: 240px;
+}
+
+.wrapper .prefix_8 {
+	padding-left: 480px;
+}
+
+.wrapper .prefix_12 {
+	padding-left: 720px;
+}
+
+/* `Prefix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper .prefix_1 {
+	padding-left: 60px;
+}
+
+.wrapper .prefix_2 {
+	padding-left: 120px;
+}
+
+.wrapper .prefix_3 {
+	padding-left: 180px;
+}
+
+.wrapper .prefix_5 {
+	padding-left: 300px;
+}
+
+.wrapper .prefix_6 {
+	padding-left: 360px;
+}
+
+.wrapper .prefix_7 {
+	padding-left: 420px;
+}
+
+.wrapper .prefix_9 {
+	padding-left: 540px;
+}
+
+.wrapper .prefix_10 {
+	padding-left: 600px;
+}
+
+.wrapper .prefix_11 {
+	padding-left: 660px;
+}
+
+.wrapper .prefix_13 {
+	padding-left: 780px;
+}
+
+.wrapper .prefix_14 {
+	padding-left: 840px;
+}
+
+.wrapper .prefix_15 {
+	padding-left: 900px;
+}
+
+/* `Suffix Extra Space >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper .suffix_4 {
+	padding-right: 240px;
+}
+
+.wrapper .suffix_8 {
+	padding-right: 480px;
+}
+
+.wrapper .suffix_12 {
+	padding-right: 720px;
+}
+
+/* `Suffix Extra Space >> 16 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.wrapper .suffix_1 {
+	padding-right: 60px;
+}
+
+.wrapper .suffix_2 {
+	padding-right: 120px;
+}
+
+.wrapper .suffix_3 {
+	padding-right: 180px;
+}
+
+.wrapper .suffix_5 {
+	padding-right: 300px;
+}
+
+.wrapper .suffix_6 {
+	padding-right: 360px;
+}
+
+.wrapper .suffix_7 {
+	padding-right: 420px;
+}
+
+.wrapper .suffix_9 {
+	padding-right: 540px;
+}
+
+.wrapper .suffix_10 {
+	padding-right: 600px;
+}
+
+.wrapper .suffix_11 {
+	padding-right: 660px;
+}
+
+.wrapper .suffix_13 {
+	padding-right: 780px;
+}
+
+.wrapper .suffix_14 {
+	padding-right: 840px;
+}
+
+.wrapper .suffix_15 {
+	padding-right: 900px;
+}

@@ -1,0 +1,337 @@
+/*
+Title:		EZINE red skins CSS File 
+Author:		imediapixel@gmail.com
+*/
+/* ----------------------- GENERAL LAYOUT -----------------------*/
+/* Heading */
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	color:#dadada;
+}
+blockquote {
+  background: url(dark/quote.png) top left no-repeat;
+}
+/* Button */
+.button-blue,
+a.button-blue,
+.button-red,
+a.button-red {
+  background: #5a5a5a;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 8px 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.button-red,
+a.button-red  {
+  background: #FF0000;
+}
+ol li {
+  border-bottom: 1px solid #4a4a4a;
+} 
+/* Item List */
+.itemlist li {
+  border-bottom: 1px solid #4a4a4a;
+}
+/* Arrow List */
+.arrowlist li {
+  border-bottom: 1px solid #4a4a4a;
+}
+/* Check List */
+.checklist li {
+  border-bottom: 1px solid #4a4a4a;
+}
+/* Check List */
+.bulletlist  li {
+  border-bottom: 1px solid #4a4a4a;
+}
+.testibox blockquote,
+#maincontent .testibox blockquote {
+  background: url(dark/quote.png) 10px 0 no-repeat;
+}
+h3.bodytitle {
+  border-bottom: 2px solid #4a4a4a;
+}
+/* ----------------------- HEADER -----------------------*/
+
+/* Short navigation description */
+span.menudesc {
+  display: block;
+  color: #8f8f8f;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+.breadcrumbs {
+  color: #8f8f8f;
+  border-bottom: 1px solid #5a5a5a;
+}
+#nivowrapper,
+#custom_nivoslider {
+  border: 1px solid #2a2a2a; 
+}
+#slidedivider {
+  height:8px;
+  background: #4a4a4a;
+  border-bottom: 4px solid #515151;
+}
+
+/* ----------------------- MAIN CONTENT -----------------------*/
+/* News list */
+.post h3 a {
+  color: #dadada;
+}
+.post h3 a:hover {
+  color: #b5b5b5;
+}
+.post-alt h3 a {
+  color: #cacaca;
+}
+.post-alt h3 a:hover {
+  color: #b5b5b5;
+}
+.topmeta,
+.bottommeta {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #868686;
+  border-bottom: 1px solid #4a4a4a;
+}
+.bottommeta {
+  border-bottom: none;
+  border-top: 1px solid #4a4a4a;
+}
+.commentpost {
+  background: url(styles/dark/bgcomment.png) left no-repeat ;
+}
+
+.relatedposts li img {
+  background: #2f2f2f;
+  border: 1px solid #4a4a4a;
+}
+.archivelists ul li {
+  color: #8f8f8f;
+  border-bottom: 1px solid #4a4a4a;
+}
+.leftbox a {
+  color: #868686;
+}
+.leftbox a:hover {
+  color: inherit;
+}
+#authorbox {
+  background: #292928;
+  border: 1px solid #3D3D3D;
+}
+#authorbox .blockavatar img.avatar {
+  background: #292929; 
+  border: 1px solid #303030;   
+}
+/*------- Page Navigation -----*/
+.navigation {
+  border-top: 4px solid #2f2f2f;
+}
+.navigation a {
+	color: #9c9c9c;
+}
+ul#twitter_update_list li {
+  border-bottom: 1px solid #4a4a4a;
+}ul#twitter_update_list li span {
+  color: #8f8f8f;
+}
+ul#twitter_update_list li span a {
+  color: #8f8f8f;
+}
+ul#twitter_update_list li span a:hover{
+  color: #FF9E33;
+}
+a#profileLink {
+  border-top: 1px solid #4a4a4a;
+	display: block;
+	padding: 0.3em 1em;
+	text-align: right;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #8f8f8f;
+}
+ul.sociallink li img {
+  padding: 2px;
+  background: #4a4a4a;
+}
+ul.sociallink li img:hover {
+  background: #000000;
+}
+.inputtext,
+input#s {
+  border: 1px solid #404040;
+  padding: 5px;
+  color: #8f8f8f;
+  background: #212121;
+}
+.searchbutton {
+  background: url(dark/searchbutton.png) no-repeat;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.searchbutton {
+  background: url(dark/searchbutton.png) no-repeat;
+}
+}
+.archivelist li {
+  border-bottom: 1px solid #4a4a4a;
+}
+.archivelist li a:hover {
+  color: #FF9E33;
+}
+ul.subscribenews li {
+  border-bottom: 1px solid #4a4a4a;
+}
+ul.subscribenews li a:hover {
+  color: #FF9E33;
+}
+.flickrgallery a img  { 
+  background: #4a4a4a;
+}
+.flickrgallery a:hover img {
+  background: #000000; 
+}
+
+/* ----------------------- FOOTER -----------------------*/
+#footerwrapper {
+  border-top: 3px solid #4a4a4a;
+  background: #212121;
+}
+/* Footer Box */
+.bottom {
+  border-top: 3px solid #4a4a4a;
+  background: #353535;
+}
+.bottom .wrapper {
+  background: none; 
+}
+.postlist li {
+  border-bottom:  1px solid #2f2f2f;
+}
+span.listdatepost {
+  color: #666666;
+}
+/* Footer Box */
+.footerbox li:hover {
+  background: #2a2a2a;
+}
+ul.footermenu li a:hover {
+  color: #FF9E33; 
+}
+/* Copyright */
+.copyright {
+  text-align: right;
+  display: block;
+}
+.copyright a,
+.copyright h3 {
+  color: #ffffff; 
+}
+.copyright h3 span {
+  color: #eaeaea;
+}
+.copyright h3 {
+  margin: 0;
+}
+
+.imgbox {
+  padding: 1px;
+  border: 1px solid #2f2f2f;
+  background: #000000;
+}
+
+/* Dropdown menu */
+.jqueryslidemenu ul li{
+  border-bottom: 3px solid #5a5a5a;
+}
+.jqueryslidemenu ul li a{
+  color: #000000;
+}
+.jqueryslidemenu ul li.selected,
+.jqueryslidemenu ul li:hover,
+.jqueryslidemenu ul li.current_page_item {
+  border-bottom: 3px solid #cccccc;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+  color: #ffffff;
+}
+.jqueryslidemenu ul li ul li a{ /*sub menus hover style*/
+color: #000000;
+}
+.jqueryslidemenu ul li ul li a{ /*sub menus hover style*/
+color: #353535;
+}
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a,
+.jqueryslidemenu ul li ul li a:link, 
+.jqueryslidemenu ul li ul li a:visited{
+  border-bottom: 1px solid #4f4f4f;
+  color: #cccccc;
+  background: #454545;
+}
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+  color: #ffffff;
+  background: #333333;
+  border-bottom: none;
+}
+.jqueryslidemenu ul li ul li:hover{
+  border: none;
+}
+
+/* Contact Form */
+#maincontactform label {
+  color: #6a6a6a;
+}
+.textfield {
+  background: #292928;
+  color: #8f8f8f;
+  border: 1px solid #3D3D3D;  
+}
+.textarea {
+  background: #292928;
+  color: #8f8f8f;
+  border: 1px solid #3D3D3D;
+}
+ul.defailinfo li a {
+  color: #2a2a2a;
+}
+ul.defailinfo li a:hover {
+  color: #D16C00;
+}
+
+/* Comments */
+li.comment .comment-text {
+  border-bottom: 1px solid #3D3D3D; 
+}
+li.comment .avatar { 
+  background: #2f2f2f; 
+  border: 1px solid #4a4a4a; 
+}
+.commentmetadata, .commentmetadata a { 
+  font-size: 10px; 
+  text-transform: uppercase; 
+  color: #5a5a5a; 
+}
+#commentform label { 
+  color: #6a6a6a; 
+}
+#commentform input[type=text] {
+  background: #292928;
+  border: 1px solid #3D3D3D; 
+  color: #8f8f8f;
+}
+#commentform textarea {
+  color: #8f8f8f;
+  background: #292928;
+  border: 1px solid #3D3D3D; 
+}
+/* carousel wrapper */
+#rightbar .jcarousel-skin-tango .jcarousel-container {
+    border: 1px solid #3D3D3D;
+}

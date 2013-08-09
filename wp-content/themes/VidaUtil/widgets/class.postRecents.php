@@ -23,8 +23,8 @@ class postRecents extends WP_Widget {
 			$query = new WP_query( 
 				array( 
 					//'post_type'      => 'page',
-                    'posts_per_page' => '5',
-                    'showposts'      => '5',
+                    'posts_per_page' => '3',
+                    'showposts'      => '3',
                     'orderby'        => 'rand'
                      )
 				); 

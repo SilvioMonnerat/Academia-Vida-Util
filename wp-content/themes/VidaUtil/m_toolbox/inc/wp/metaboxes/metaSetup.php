@@ -3,30 +3,16 @@
 require_once('MetaBox.php');
 require_once('MediaAccess.php');
 
-$wpalchemy_media_access = new WPAlchemy_MediaAccess();
-
 // global styles for the meta boxes
-if (is_admin()) wp_enqueue_style('wpalchemy-metabox', get_stylesheet_directory_uri() . '/library/css/metaboxes.css');
+if (is_admin()) wp_enqueue_style('wpalchemy-metabox', get_stylesheet_directory_uri() . '/css/metaboxes.css');
 
-
-$mb_curso = new WPAlchemy_MetaBox(array
-(
-	'id' => 'curso-customMeta',
-	'title' => 'Curso',
-	'types' => array('curso'), // added only for pages and to custom post type "events"
-	'context' => 'normal', // same as above, defaults to "normal"
+$mb_agenda = new WPAlchemy_MetaBox(array(
+	'id'       => 'agenda-customMeta',
+	'title'    => 'Agenda',
+	'types'    => array('agenda'), // added only for pages and to custom post type "events"
+	'context'  => 'normal', // same as above, defaults to "normal"
 	'priority' => 'high', // same as above, defaults to "high"
-	'template' => METAPATH . 'meta/curso-meta.php'
-));
-
-$mb_galeria = new WPAlchemy_MetaBox(array
-(
-	'id' => 'galeria-customMeta',
-	'title' => 'Album',
-	'types' => array('galeria'), // added only for pages and to custom post type "events"
-	'context' => 'normal', // same as above, defaults to "normal"
-	'priority' => 'high', // same as above, defaults to "high"
-	'template' => METAPATH . 'meta/album-meta.php'
+	'template' => METAPATH . 'meta/agenda-meta.php'
 ));
 
 /* eof */

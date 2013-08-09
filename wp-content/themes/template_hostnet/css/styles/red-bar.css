@@ -1,0 +1,169 @@
+/*
+Title:		EZINE Red skins CSS File 
+Author:		imediapixel@gmail.com
+*/
+
+/* ----------------------- GENERAL LAYOUT -----------------------*/
+
+/* links */
+a,a:link,a:visited {
+  color:#f00000; 
+  text-decoration:none;
+}
+a:hover{
+  color:#cacaca;
+}
+/* Button */
+.button-blue,
+a.button-blue,
+.button-red,
+a.button-red {
+  background: #5a5a5a;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 8px 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.button-red,
+a.button-red  {
+  background: #FF0000;
+}
+
+/* ----------------------- HEADER -----------------------*/
+/* Header Section */
+#headerbar {  
+  background: url(red/headerbar.jpg) bottom repeat-x;
+}
+/* Logo */
+#logo {
+  background: url(red/bglogo2.png) top center no-repeat;
+}
+/* Short navigation description */
+span.menudesc {
+  color: #CC5C5E;
+}
+#slidedivider {
+  background: url(red/headerbar.jpg) bottom repeat-x;
+}
+.nivo-caption p {
+	color: #454545;
+}
+/* Sidebar Box */
+.sidebox h3,
+.leftbox h3 {
+  color: #f00000;
+}
+
+/* ----------------------- MAIN CONTENT -----------------------*/
+/* News list */
+.post h3 a {
+  color: #5a5a5a;
+}
+.post h3 a:hover {
+  color: #f00000;
+}
+.post-alt h3 a {
+  color: #5a5a5a;
+}
+.post-alt h3 a:hover {
+  color: #f00000;
+}
+.commentpost {
+  background: url(red/bgcomment.png) left no-repeat ;
+}
+
+.leftbox a {
+  color: #868686;
+}
+.leftbox a:hover {
+  color: inherit;
+}
+ul#twitter_update_list li span a {
+  color: #5a5a5a;
+}
+ul#twitter_update_list li span a:hover{
+  color: #f00000;
+}
+/*------- Page Navigation -----*/
+.navigation {
+  border-top: 4px solid #f0f0f0;
+  padding-top: 5px;  
+  display: block;
+  width: 100%;
+  margin: 30px 0 10px 0;
+}
+.navigation a {
+	padding: 6px; 
+	margin: 2px;
+	text-decoration: none;
+	color: #9c9c9c;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 1.8em;
+	font-style: italic;
+}
+.navigation a:hover {
+	color: #f00000;
+  border-bottom: 1px dotted #f0f0f0  
+}
+/* ----------------------- FOOTER -----------------------*/
+#footerwrapper {
+  background: #FCFCFC url(red/bgfooter.jpg) top left repeat-x;
+}
+/* Footer Box */
+.bottom {
+  padding: 10px;
+  background: #f00000;
+}
+ul.footermenu {
+  float: left;
+}
+ul.footermenu li {
+  float: left;
+  margin: 5px 10px;
+  font-size: 1.2em;
+}
+ul.footermenu li a {
+  color: #ffffff; 
+  text-transform: capitalize;
+  font-weight: bold;
+}
+ul.footermenu li a:hover {
+  color: #126B81; 
+}
+/* Copyright */
+.copyright {
+  text-align: right;
+  display: block;
+}
+.copyright a,
+.copyright h3 {
+  color: #ffffff; 
+}
+.copyright h3 span {
+  color: #BF0000;
+}
+.copyright h3 {
+  margin: 0;
+}
+
+.jqueryslidemenu ul li.selected,
+.jqueryslidemenu ul li:hover,
+.jqueryslidemenu ul li.current_page_item {
+  border-bottom: 3px solid #E80000;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: #404040;
+}
+.jqueryslidemenu ul li a.selected {
+  color: #CC4548;
+}
+.jqueryslidemenu ul li a:hover{
+color: #CC4548;
+}
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+color: #CC4548;
+background: #EDBBBC;
+border: none;
+}
