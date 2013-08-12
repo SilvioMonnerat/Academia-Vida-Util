@@ -8,20 +8,19 @@
 <br>
 <div id="side-info-column" class="inner-sidebar">
     <div class="postbox">
-        <h3 class="hndle"><span>My Other Plugins</span></h3>
+        <h3 class="hndle"><span>All in One Webmaster Premium Version Features</span></h3>
 
         <div class="inside">
             <ul>
-                <li>1) <a href="http://Crunchify.com/twitter-goodies/" title="Twitter Goodies" target="_blank">Twitter
-                    Goodies</a></li>
-                <li>2) <a href="http://Crunchify.com/wp-google-buzz/" title="All in One Webmaster" target="_blank">WP
-                    Google Buzz</a></li>
-                <li>3) <a href="http://Crunchify.com/wp-archive-sitemap-generator/" title="WP Archive-Sitemap Generator"
-                          target="_blank">WP Archive-Sitemap Generator</a></li>
-                <li>4) <a href="http://Crunchify.com/foursquare-checkins/" title="FourSquare Checkins"
-                          target="_blank">FourSquare Checkins</a></li>
-                <li>5) <a href="http://Crunchify.com/all-in-one-webmaster/" title="Facebook Members" target="_blank">All in
-                    One Webmaster</a></li>
+                <li>1) Brand new dedicated plugin menu</li>
+                <li>2) Facebook page insights, admin insights, app insights options</li>
+                <li>3) Google XML Sitemap (sitemap.xml)</li>
+                <li>4) Google Authorship Options</li>
+                <li>5) Google Tag Manager Integration</li>
+                <li>6) Header / Footer Section</li>
+                <li>7) Misc Options: Add Global Site Favicon Option</li>
+                <li><b>Note:</b> Just one time purchase and life time upgrade option.</li>
+    
             </ul>
         </div>
     </div>

@@ -15,4 +15,13 @@ $mb_agenda = new WPAlchemy_MetaBox(array(
 	'template' => METAPATH . 'meta/agenda-meta.php'
 ));
 
+$mb_agenda = new WPAlchemy_MetaBox(array(
+	'id'       => 'foto-customMeta',
+	'title'    => 'Fotos',
+	'types'    => array('foto'), // added only for pages and to custom post type "events"
+	'context'  => 'normal', // same as above, defaults to "normal"
+	'priority' => 'high', // same as above, defaults to "high"
+	'template' => METAPATH . 'meta/foto-meta.php'
+));
+
 /* eof */

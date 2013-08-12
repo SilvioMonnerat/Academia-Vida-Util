@@ -5,7 +5,7 @@
 		<?php
 			$img      = get_template_directory_uri()."/images/spinning.jpg";
 			$timthumb = get_template_directory_uri()."/m_toolbox/timthumb/timthumb.php";
-			$slider   = '[layerslider id="1"]';
+			$slider   = '[layerslider id="3"]';
 			if($slider){
 				echo do_shortcode( $slider );
 			} else{

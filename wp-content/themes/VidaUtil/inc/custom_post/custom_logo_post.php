@@ -41,7 +41,7 @@ function create_post_type_logo() {
 	    'publicly_queryable'   => true,
 	    'show_ui'              => true,
 	    'show_in_menu'         => true,
-	    //'menu_icon'            => get_bloginfo('template_directory') . '/images/cp-icon-logo.png',
+	    'menu_icon'            => get_bloginfo('template_directory') . '/images/custom-post-icon.png',
 	    'has_archive'          => 'logo',
 	    'rewrite'              => array('slug' 
 	    	                   => 'logo','with_front' 

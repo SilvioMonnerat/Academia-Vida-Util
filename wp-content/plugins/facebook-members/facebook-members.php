@@ -3,7 +3,7 @@
 Plugin Name: Facebook Members
 Plugin URI: http://Crunchify.com/facebook-members/
 Description: THE Simplest way to bring Facebook LikeBox + Facebook Recommendation Bar functionality to WordPress with lot more Options.
-Version: 5.0.6
+Version: 5.0.7
 Author: Crunchify
 Author URI: http://Crunchify.com
 */
@@ -122,9 +122,9 @@ function as_facebook_mem_likebox()
 
     if ($show_sponser1 == 1) {
         $sponserlink_profile = "";
-    } /*else {
+    } else {
         $sponserlink_profile = '<div align="left">- <a href="http://Crunchify.com/facebook-members/" title="Facebook Members WordPress Plugin" target="_blank"> <font size="1">' . 'Facebook Members WordPress Plugin' . '</font></a></div>';
-    }*/
+    }
 
 
     $T1 = '<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F' . $fm_pagename . '&amp;width=' . $fm_width . '&amp;height=' . $fm_height . '&amp;colorscheme=light&amp;show_faces=' . $fm_faces . '&amp;border_color&amp;stream=' . $fm_stream . '&amp;header=' . $fm_header . '" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' . $fm_width . 'px; height:' . $fm_height . 'px; margin:-1px;" allowTransparency="true"></iframe>';
@@ -255,9 +255,9 @@ function show_as_facebook_mem_likebox_widget($args)
 
     if ($show_sponser1 == 1) {
         $sponserlink_profile = "";
-    } /*else {
+    } else {
         $sponserlink_profile = '<div align="left">- <a href="http://Crunchify.com/facebook-members/" title="Facebook Members WordPress Plugin" target="_blank"> <font size="1">' . 'Facebook Members WordPress Plugin' . '</font></a></div>';
-    }*/
+    }
 
     $T2 = '<div id="likebox-frame"><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F' . $fm_widget_page_name . '&amp;width=' . $fm_widget_width . '&amp;height=' . $fm_widget_height . '&amp;colorscheme=light&amp;show_faces=' . $fm_widget_faces . '&amp;border_color&amp;stream=' . $fm_widget_stream . '&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' . $fm_widget_width . 'px; height:' . $fm_widget_height . 'px; margin:-1px;" allowTransparency="true"></iframe></div>';
 
@@ -282,8 +282,8 @@ function as_facebook_mem_likebox_widget_control()
 function widget_as_facebook_mem_likebox_init()
 {
     $widget_options = array('classname' => 'widget_as_facebook_mem_likebox', 'description' => __("Display Facebook Members"));
-    wp_register_sidebar_widget('as_facebook_mem_likebox_widgets', __('Facebook Link Box'), 'show_as_facebook_mem_likebox_widget', $widget_options);
-    wp_register_widget_control('as_facebook_mem_likebox_widgets', __('Facebook Link Box'), 'as_facebook_mem_likebox_widget_control');
+    wp_register_sidebar_widget('as_facebook_mem_likebox_widgets', __('Facebook Members'), 'show_as_facebook_mem_likebox_widget', $widget_options);
+    wp_register_widget_control('as_facebook_mem_likebox_widgets', __('Facebook Members'), 'as_facebook_mem_likebox_widget_control');
 }
 
 function facebook_plugin_admin_init()
