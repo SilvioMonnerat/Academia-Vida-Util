@@ -17,8 +17,8 @@
 
 				<?php
 					$thumb  = '';
-                    $width  = 250;
-            		$height = 250;
+                    $width  = 230;
+            		$height = 230;
                     $title  = get_the_title();
                     $img    = get_post_image_src($post->ID);
                     $default_attr = array(
@@ -31,28 +31,28 @@
                     $thumb = $thumbnail["thumb"];
 	
 					$project_gallery = get_post_meta($post->ID, 'theme_project_gallery', true);
+					$timthumb = get_template_directory_uri(). 'timthumb.php';
 					//the_crop_image($item['theme_project_item_image'], "&amp;w=$width&amp;h=$height&amp;zc=1")
 				?>
 
-				<div id="gallery" class="row clearfix">
+				<div id="gallery" class="">
 					<?php if( $project_gallery ) : ?>
-					<h1 class="title"><?php the_title() ?></h1>
+					<div class="title"><?php the_title() ?></div>
 			            <ul>
 			            	<?php foreach( $project_gallery as $item ) : ?>
-			            		<?php if( $item['theme_project_item_image'] ) : ?>
-			                        <li class="span2">
-			                        	<div class="title"><?php echo $item['title'] ?></div>
-			                            <a class="fancybox" data-fancybox-group="gallery"  href="<?php echo $item['theme_project_item_image'] ?>" title="<?php echo $item['title'] ?>" >
-			                            	<img src="<?php echo $item['theme_project_item_image'] ?>" alt="" />
-			                        	</a>
-			                        </li>
-			            		<?php endif; ?>
-			            		<?php if( $item['theme_project_item_video'] ) : ?>
-			                        <li>
-			                            <?php echo wp_oembed_get( $item['theme_project_item_video'], array('width'=> ''. $item['theme_project_item_size'] .'') ); ?>
-			                        </li>
-			                    <?php endif; ?>
-			            	<?php endforeach; ?>
+								<?php if( $item['theme_project_item_image'] ) : ?>
+							        <li>
+							        	<a class="fancybox" data-fancybox-group="gallery"  href="<?php echo $item['theme_project_item_image'] ?>" title="<?php echo $item['title'] ?>" >
+							            	<img class="scale-with-grid" src="<?php echo $item['theme_project_item_image'] ?>" alt="" />
+							        	</a>
+							        </li>
+								<?php endif; ?>
+								<?php if( $item['theme_project_item_video'] ) : ?>
+							        <li>
+							            <?php echo wp_oembed_get( $item['theme_project_item_video'], array('width'=> ''. $item['theme_project_item_size'] .'') ); ?>
+							        </li>
+							    <?php endif; ?>
+							<?php endforeach; ?>
 			            </ul>
 			        <?php endif; ?>
 		        </div>

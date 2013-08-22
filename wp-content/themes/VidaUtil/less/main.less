@@ -748,42 +748,44 @@ form#contactForm{
 /* PÁGINA DE FOTOS */
 
 #gallery{
-	margin: 0 auto;
 	padding: 2em;
-	h1.title{
+	.title{
+		font-size: 20px;
 		font-family: 'Ubuntu Light';
-		font-weight: lighter;
-		font-size: 25px; 
 		background: orange;
-		width: 30%;
+		width: 40%;
 		color:#FFF;
-		padding: 20px;
-		-webkit-border-bottom-right-radius: 50px;
-		-webkit-border-top-left-radius: 50px;
-		-moz-border-radius-bottomright: 50px;
-        -moz-border-radius-topleft: 50px;
-        -o-border-radius-bottomright: 50px;
-        -o-border-radius-topleft: 50px;
-        -ms-border-radius-bottomright: 50px;
-        -ms-border-radius-topleft: 50px;
+		padding: 10px 20px;
+		-webkit-border-bottom-right-radius: 35px;
+		-webkit-border-top-left-radius: 35px;
+		-moz-border-radius-bottomright: 35px;
+        -moz-border-radius-topleft: 35px;
+        -o-border-radius-bottomright: 35px;
+        -o-border-radius-topleft: 35px;
+        -ms-border-radius-bottomright: 35px;
+        -ms-border-radius-topleft: 35px;
+
 	}
 	ul{
+		margin: 0px;
 		padding: 0px;
 		li{
 			list-style: none;
 			display: inline-block;
-			float:left;
-			margin: 10px 20px;
-			img{
-				width: 100%;
-				max-width: 100%;
+			padding-right: 15px;
+			padding-top: 20px;
+			img.scale-with-grid{
+				display: inline-block;
+				width: 230px;
+				height: 200px;				
+				padding-bottom: 20px;
 			}
+		}
+		li:first-child{
+			padding-left: 0;
+		}
+		li:last-child{
+			padding-right: 0;
 		}
 	}
 }
-
-.fancybox-custom .fancybox-skin {
-	box-shadow: 0 0 50px #222;
-}
-
-/* PAGINAÇÃO */
