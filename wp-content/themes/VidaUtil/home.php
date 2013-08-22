@@ -20,13 +20,11 @@
 	<div class="content">
 		<article id="post-<?php the_ID(); ?>" class="container clearfix">
 			<?php
-				$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 				$featured = new WP_Query(
 					array(
 				    	'post_type'      => 'page',
 				    	'posts_per_page' => '3',
 				    	'showposts'      => '3',
-				    	'paged'          => $paged,
 				    	'orderby'        => 'rand'
   					)
 				);

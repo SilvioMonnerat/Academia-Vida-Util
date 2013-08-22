@@ -6,6 +6,8 @@
 		 * try to get it the easy way.
 		 * if not, we use curl
 		 */
+
+		
 		if (!($cache = file_get_contents($url))) {
 			//echo 'fail';
 			try {
@@ -23,9 +25,14 @@
 			}
 		
 		}
+		//$cache = $example;
+		$cache = ereg_replace('dc:', '', $cache);
+
 		//d($cache);
+
 		if ($loadAsSimpleXML) {
-			$xml = simplexml_load_string($cache);
+
+			$xml = simplexml_load_string($cache, 'SimpleXMLElement', LIBXML_NOCDATA );
 		} else {
 			// disable PHP errors
 			$old = libxml_use_internal_errors(true);
@@ -38,7 +45,6 @@
 			$xml = simplexml_import_dom($dom);
 		}
 
-		//d($xml);
 		// returns simplexml obj
 		if ($simplexml) {
 			return $xml;
@@ -47,3 +53,4 @@
 			return $dom;
 		}
 	}
+

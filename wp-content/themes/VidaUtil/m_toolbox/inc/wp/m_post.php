@@ -241,9 +241,9 @@ function get_catByName($name, $taxonomies = 'category') {
 }
 
 function setOG($query = NULL) {
-	global $mb_problema;
+	/*global $mb_problema;
 	global $mb_destaque;
-	global $mb_proposta;
+	global $mb_proposta;*/
 	
 	if (NULL == $query) {
 		global $wp_query;
@@ -253,7 +253,7 @@ function setOG($query = NULL) {
 		 	while ($query->have_posts()) {
 		 		 $query->the_post();
 				
-				$mb_proposta->the_meta($post->ID);
+				/*$mb_proposta->the_meta($post->ID);
 				$pmeta = $mb_proposta->meta;
 				
 				$mb_problema->the_meta($post->ID);
@@ -261,7 +261,7 @@ function setOG($query = NULL) {
 				
 				$mb_destaque->the_meta($post->ID);
 				$dmeta = $mb_destaque->meta;	
-				
+				*/
 				//get image
 				if($dmeta['videoURL']) {
 					$code = getVideoCode($dmeta['videoURL']);

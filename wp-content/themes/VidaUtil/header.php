@@ -28,11 +28,12 @@
 	<script src="<?php echo $protocol; ?>://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#contactForm").validate();
-		});
-	</script>
+
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
 
 	<?php wp_head() ?>
 </head>
@@ -52,8 +53,7 @@
 				<?php
 					$logo = new WP_Query(
 						array(
-					    	'post_type'=>'logo',
-					    	'paged' => get_query_var( 'paged' )
+					    	'post_type'=>'logo'
 						)
 					);
 					while ($logo->have_posts()) : $logo->the_post(); 

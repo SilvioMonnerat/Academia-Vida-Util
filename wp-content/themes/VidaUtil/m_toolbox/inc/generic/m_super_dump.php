@@ -1,9 +1,10 @@
 <?php
 	//function inspect($var) { d($var); }
+	if(!defined('m_debug')) {define('m_debug', 1);}
 
 
 	function d($var) {
-		if (TRUE) {
+		if (m_debug) {
 			
 			$bt = debug_backtrace();
 			$src = file($bt[0]["file"]);
@@ -44,9 +45,9 @@
 		$type = get_type($var);
 		$colorType = get_type_color($type);
 		
-		echo "<div class='inspect' style='background-color:#FFF; overflow:visible;'><pre><span style='color:$colorVar'>";
+		echo "<div class='m_inspect' style='background-color:#FFF; overflow:visible;'><pre><span style='color:$colorVar'>";
 		echo $label;
-		echo "</span> = <span style='color:$colorType'>";
+		echo "</span> = <span class='subDump' style='color:$colorType'>";
 		if ($type == 'string') {
 			print_r(htmlspecialchars($var));
 		} else {
@@ -80,7 +81,7 @@
 		if ('bool' == $type) {
 			$colorType = 'Green';
 		} elseif ('string' == $type) {
-			$colorType = 'DarkOrange';
+			$colorType = 'DimGrey';
 		} elseif ('array' == $type) {
 			$colorType = 'DarkOrchid';
 		} elseif ('object' == $type) {

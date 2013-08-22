@@ -1,4 +1,6 @@
 <?php 	
+	
+	include_once(TEMPLATEPATH . '/m_toolbox/m_toolbox.php');
 
 	if ( ! function_exists( 'setup_theme' ) ){
 		function setup_theme(){
@@ -7,19 +9,19 @@
 			$shortname = 'VidaUtil';
 			$store_options_in_one_row = true;
 
-			require_once(TEMPLATEPATH . '/inc/metabox/metabox.php');
+			include_once(TEMPLATEPATH . '/inc/breadcrumb.php' );
 
-			require_once(TEMPLATEPATH . '/inc/custom_post/custom_post_agenda.php');
+			include_once(TEMPLATEPATH . '/widgets/widgets.php');
 
-			require_once(TEMPLATEPATH . '/inc/custom_post/custom_post_foto.php');
+			include_once(TEMPLATEPATH . '/admin/ot-loader.php' );
 
-			require_once(TEMPLATEPATH . '/m_toolbox/m_toolbox.php');
+			include_once(TEMPLATEPATH . '/inc/meta-boxes.php' );
 
-			require_once(TEMPLATEPATH . '/widgets/widgets.php');
-
-			require_once(TEMPLATEPATH . '/inc/breadcrumb.php' );
+			include_once(TEMPLATEPATH . '/inc/cpt-galeria.php' );	
 
 			load_theme_textdomain('VidaUtil',get_template_directory().'/languages');
+
+			add_action( 'admin_menu', 'enable_media_upload' );
 
 			add_action('init', 'load_stylesheet_css');
 
@@ -29,13 +31,13 @@
 
 			add_action( 'init', 'register_main_menus' );
 
-			add_action( 'init', 'sidebar_widgets' ); 
+			add_action( 'init', 'sidebar_widgets' );
 
 			add_theme_support( 'post-thumbnails' );
 
 			add_image_size( 'featured', 300, 300 );
 
-			add_theme_support( 'post-thumbnails', array( 'page', 'post' ) );
+			add_theme_support( 'post-thumbnails', array( 'page', 'post', 'galeria' ) );
 
 			add_filter('excerpt_more', 'readMore');
 
@@ -46,25 +48,34 @@
 		}
 	}add_action( 'after_setup_theme', 'setup_theme' );
 
+
+	function enable_media_upload(){
+    	wp_enqueue_script('media-upload');
+	}
+
 	function load_stylesheet_css() {
-		
+		if( !is_admin() ){			
 			$template_dir = get_template_directory_uri();
-		if( !is_admin() ){
 			wp_enqueue_style( 'bootstrap',  $template_dir . "/css/bootstrap.css");
 			wp_enqueue_style( 'bootstrap-responsive',  $template_dir . "/css/bootstrap-responsive.css");
 			wp_enqueue_style( 'main',  $template_dir . "/css/main.css");
-			wp_enqueue_style( 'lightbox',  $template_dir . "/css/lightbox.css");
+			wp_enqueue_style( 'jquery.fancybox-fancybox',  $template_dir . "/css/jquery.fancybox.css");
+			wp_enqueue_style( 'jquery.fancybox-buttons',  $template_dir . "/css/jquery.fancybox-buttons.css");
+			wp_enqueue_style( 'jquery.fancybox-thumbs',  $template_dir . "/css/jquery.fancybox-thumbs.css");
 		}
 	}
 
-
 	function load_scripts_js(){
-			$template_dir = get_template_directory_uri();
 		if( !is_admin() ){	
+			$template_dir = get_template_directory_uri();
 			wp_enqueue_script( 'jquery ' );
 			wp_enqueue_script('bootstrap', $template_dir . '/js/bootstrap.js', array('jquery'), '1.0', true);
-			wp_enqueue_script('custom', $template_dir . '/js/custom.js', array('jquery'), '1.0', true);
-			wp_enqueue_script('lightbox', $template_dir . '/js/lightbox.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('mousewheel', $template_dir . '/js/jquery.mousewheel-3.0.6.pack.js', array('jquery'), '3.0', true);
+			wp_enqueue_script('jquery.fancybox', $template_dir . '/js/jquery.fancybox.js', array('jquery'), '2.1', true);
+			wp_enqueue_script('jquery.fancybox-buttons', $template_dir . '/js/jquery.fancybox-buttons.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('jquery.fancybox-thumbs', $template_dir . '/jquery.fancybox-thumbs.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('jquery.fancybox-media', $template_dir . '/js/jquery.fancybox-media.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('facy-custom', $template_dir . '/js/facy-custom.js', array('jquery'), '1.0', true);
 		}
 		if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 	}
@@ -79,14 +90,6 @@
 	   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
 	   return $html;
 	}
-
-	function toASCII( $str ) { 
-	    return strtr(utf8_decode($str),  
-	        utf8_decode( 
-	        'ŠŒŽšœžŸ¥µÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿ'), 
-	        'SOZsozYYuAAAAAAACEEEEIIIIDNOOOOOOUUUUYsaaaaaaaceeeeiiiionoooooouuuuyy'); 
-	}
-
 
 	function register_main_menus() {
 		register_nav_menus(
