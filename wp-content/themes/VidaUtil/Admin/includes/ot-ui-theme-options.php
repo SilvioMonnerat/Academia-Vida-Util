@@ -1,4 +1,4 @@
-<?php if ( ! defined( 'OT_VERSION') ) exit( 'No direct script access allowed' );
+<?php //if ( ! defined( 'OT_VERSION') ) exit( 'No direct script access allowed' );
 /**
  * Builds the Theme Option UI.
  *
@@ -10,19 +10,19 @@
  */
 
 /* get the settings array */
-$get_settings = get_option( 'option_tree_settings' );
+//$get_settings = get_option( 'option_tree_settings' );
 
 /* sections array */
-$sections = isset( $get_settings['sections'] ) ? $get_settings['sections'] : array();
+//$sections = isset( $get_settings['sections'] ) ? $get_settings['sections'] : array();
 
 /* settings array */
-$settings = isset( $get_settings['settings'] ) ? $get_settings['settings'] : array();
+//$settings = isset( $get_settings['settings'] ) ? $get_settings['settings'] : array();
 
 /* contexual_help array */
-$contextual_help = isset( $get_settings['contextual_help'] ) ? $get_settings['contextual_help'] : array();
+//$contextual_help = isset( $get_settings['contextual_help'] ) ? $get_settings['contextual_help'] : array();
 
 /* build the Theme Options */
-if ( function_exists( 'ot_register_settings' ) ) {
+/*if ( function_exists( 'ot_register_settings' ) ) {
 
   ot_register_settings( array(
       array(
@@ -50,7 +50,7 @@ if ( function_exists( 'ot_register_settings' ) ) {
     ) 
   );
 
-}
+}*/
 
 /* End of file ot-ui-theme-options.php */
 /* Location: ./option-tree/ot-ui-theme-options.php */

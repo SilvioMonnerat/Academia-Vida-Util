@@ -1,37 +1,37 @@
 <?php
-	add_action( 'init', 'create_post_type_galeria' );
+	add_action( 'init', 'create_post_type_logo' );
 
-	function create_post_type_galeria() {
+	function create_post_type_logo() {
 
 	    $labels = array(
-		    'name'                 => _x('Galeria', 'post type general name'),
-		    'singular_name'        => _x('Galeria', 'post type singular name'),
-		    'add_new'              => _x('Adicionar Novo', 'galeria'),
-		    'add_new_item'         => __('Adicionar Novo Galeria'),
-		    'edit_item'            => __('Editar Galeria'),
-		    'new_item'             => __('Novo Galeria'),
-		    'all_items'            => __('Galeria'),
-		    'view_item'            => __('Vizualizar Galeria'),
-		    'search_items'         => __('Pesquisar por Galeria'),
-		    'not_found'            => __('Nenhum Galeria encontrado'),
-		    'not_found_in_trash'   => __('Nenhum Galeria encontrado na lixeira'),
+		    'name'                 => _x('Logo', 'post type general name'),
+		    'singular_name'        => _x('Logo', 'post type singular name'),
+		    'add_new'              => _x('Adicionar Novo', 'logo'),
+		    'add_new_item'         => __('Adicionar Novo Logo'),
+		    'edit_item'            => __('Editar Logo'),
+		    'new_item'             => __('Novo Logo'),
+		    'all_items'            => __('Logo'),
+		    'view_item'            => __('Vizualizar Logo'),
+		    'search_items'         => __('Pesquisar por Logo'),
+		    'not_found'            => __('Nenhum Logo encontrado'),
+		    'not_found_in_trash'   => __('Nenhum Logo encontrado na lixeira'),
 		    'parent_item_colon'    => '',
-		    'menu_name'            => 'Galeria'
+		    'menu_name'            => 'Logo'
 	    );
 	    
 	    /**
 	     * Registamos o tipo de post curso através desta função
 	     * passando-lhe os labels e parâmetros de controlo.
 	     */
-	    register_post_type( 'galeria', array(
+	    register_post_type( 'logo', array(
 		    'labels'               => $labels,
 		    'public'               => true,
 		    'publicly_queryable'   => true,
 		    'show_ui'              => true,
 		    'show_in_menu'         => true,
 		    'menu_icon'            => get_bloginfo('template_directory') . '/images/custom-post-icon.png',
-		    'has_archive'          => 'galeria',
-		    'rewrite'              => array('slug' => 'galeria','with_front' => false),
+		    'has_archive'          => 'logo',
+		    'rewrite'              => array('slug' => 'logo','with_front' => false),
 		    'capability_type'      => 'post',
 		    'has_archive'          => true,
 		    'hierarchical'         => false,
@@ -43,9 +43,9 @@
 	    /**
 	     * Registamos a categoria de curso para o tipo de post curso
 	     */
-	    register_taxonomy( 'galeria_category', array( 'galeria' ), array(
+	    register_taxonomy( 'logo_category', array( 'logo' ), array(
 	        'hierarchical'         => true,
-	        'label'                => __( 'Galeria Category' ),
+	        'label'                => __( 'Logo Category' ),
 	        'labels'               => array( // Labels customizadas
 		    'name'                 => _x( 'Categories', 'taxonomy general name' ),
 		    'singular_name'        => _x( 'Category', 'taxonomy singular name' ),
@@ -63,7 +63,7 @@
 	        'show_in_tag_cloud'    => true,
 	        'query_var'            => true,
 	        'rewrite'              => array('slug'
-	                               => 'galeria','with_front' 
+	                               => 'logo','with_front' 
 	                               => false,),
 	        )
 	    );
@@ -72,6 +72,6 @@
 	     * Esta função associa tipos de categorias com tipos de posts.
 	     * Aqui associamos as tags ao tipo de post curso.
 	     */
-	    register_taxonomy_for_object_type( 'tags', 'galeria' );
+	    register_taxonomy_for_object_type( 'tags', 'logo' );
 	    
 	}

@@ -1,4 +1,4 @@
-<?php if ( ! defined( 'OT_VERSION') ) exit( 'No direct script access allowed' );
+<?php //if ( ! defined( 'OT_VERSION') ) exit( 'No direct script access allowed' );
 /**
  * Builds the Setting & Documentation UI.
  *
@@ -8,7 +8,7 @@
  * @author    Derek Herman <derek@valendesigns.com>
  * @copyright Copyright (c) 2012, Derek Herman
  */
-if ( function_exists( 'ot_register_settings' ) ) {
+/*if ( function_exists( 'ot_register_settings' ) ) {
 
   ot_register_settings( array(
       array(
@@ -219,7 +219,7 @@ if ( function_exists( 'ot_register_settings' ) ) {
     )
   );
 
-}
+}*/
 
 /* End of file ot-ui-admin.php */
 /* Location: ./option-tree/ot-ui-admin.php */

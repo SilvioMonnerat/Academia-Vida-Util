@@ -17,7 +17,9 @@
 
 			include_once(TEMPLATEPATH . '/inc/meta-boxes.php' );
 
-			include_once(TEMPLATEPATH . '/inc/cpt-galeria.php' );	
+			include_once(TEMPLATEPATH . '/inc/cpt-galeria.php' );
+
+			include_once(TEMPLATEPATH . '/inc/cpt-logo.php' );	
 
 			load_theme_textdomain('VidaUtil',get_template_directory().'/languages');
 
@@ -37,7 +39,7 @@
 
 			add_image_size( 'featured', 300, 300 );
 
-			add_theme_support( 'post-thumbnails', array( 'page', 'post', 'galeria' ) );
+			add_theme_support( 'post-thumbnails', array( 'page', 'post', 'galeria', 'logo' ) );
 
 			add_filter('excerpt_more', 'readMore');
 

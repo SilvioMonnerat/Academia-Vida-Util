@@ -72,7 +72,7 @@
 			<hr class="line clearfix">
 
 			<div class="likeBox span12">
-				<div class="fb-like-box" data-href="https://www.facebook.com/wordpress" data-width="1170" data-height="200" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+				<div class="fb-like-box" data-href="https://www.facebook.com/178596645660332" data-width="1170" data-height="200" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 			</div>
 		
 		</article>

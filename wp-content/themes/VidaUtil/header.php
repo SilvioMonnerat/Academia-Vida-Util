@@ -50,25 +50,21 @@
 	<header id="header">
 		<section role="header" class="container clearfix">
 			<div class="logo span2">
-				<?php
-					$logo = new WP_Query(
-						array(
-					    	'post_type'=>'logo'
-						)
-					);
-					while ($logo->have_posts()) : $logo->the_post(); 
-				        global $post;
-				        $meta = get_post_meta( $post->ID, 'upload_file', true );
-				?>
-					<?php if(!empty($meta) && isset($meta)): ?>
-						<a href="<?php bloginfo('home') ?>"><img src="<?php echo $meta; ?>"></a>
-					<?php else: ?>
-						<a href="<?php bloginfo('home') ?>"><h1><?php bloginfo( 'title' ) ?></h1></a>
-					<?php endif; ?>
-				<?php 
-					endwhile; 
-					wp_reset_query(); 
-				?>
+
+				<?php $logo = new WP_Query( 'post_type=logo' );	?>
+
+				<?php while($logo->have_posts()) : $logo->the_post(); ?>
+
+					<?php $logo_meta_box = get_post_meta( $post->ID, 'theme_logo_meta_box', true ); ?>
+
+						<?php foreach($logo_meta_box as $item): ?>
+
+							<a href="<?php bloginfo('home') ?>"><img src="<?php echo $item['logo_meta_box_image']; ?>"></a>
+
+						<?php endforeach; ?>
+
+				<?php endwhile; wp_reset_query(); ?>
+
 			</div>
 			<nav class="menu_header span7">
 				<?php 

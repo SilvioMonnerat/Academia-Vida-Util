@@ -80,6 +80,36 @@ function _custom_meta_boxes() {
       )        
     )
   );
+
+$logo_meta_box = array(
+ 'id'          => 'logo_meta_box',
+  'title'       => 'Logomarca Vida Útil',
+  'desc'        => '',
+  'pages'       => array('logo' ),
+  'context'     => 'normal',
+  'priority'    => 'high',
+  'fields'      => array(     
+  array(
+    'id'          => 'theme_logo_meta_box',
+    'type'        => 'list-item',
+    'desc'        => 'Use esta ferramenta para construir o seu projeto de galeria.',
+    'settings'    => array(     
+      array(
+      'label'       => 'Insira a Logomarca aqui',
+      'id'          => 'logo_meta_box_image',
+      'type'        => 'upload',
+      'desc'        => 'Envie sua imagem usando o builtin de gerenciamento de mídia.',
+      'std'         => '',
+      'rows'        => '',
+      'post_type'   => '',
+      'taxonomy'    => '',
+      'class'       => '',
+      'section'     => ''
+      )
+      ) 
+    )
+  )
+);
     
 
   /**
@@ -87,5 +117,6 @@ function _custom_meta_boxes() {
    * ot_register_meta_box() function.
    */
   ot_register_meta_box( $project_meta_box );
+   ot_register_meta_box( $logo_meta_box );
 
 }
